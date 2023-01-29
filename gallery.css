@@ -29,7 +29,7 @@ h1,h2,h3{font-size: x-large;}
 
 /* MAIN */
 main{
-  width: 980px;
+  width: 90%;
   margin:0 auto;
 }
 #background{
@@ -51,7 +51,7 @@ justify-content:center;
     padding-bottom: 5px;
 }
 .item {
-  width: 25%;
+  width: 20%;
   padding: 15px;
   margin: 5px;
   text-align: center;
@@ -59,7 +59,6 @@ justify-content:center;
 }
 .item a {
   display: block;
-  width: 240px;
   height: 160px;
   overflow: hidden;
   margin: 0 auto;
@@ -85,7 +84,7 @@ transition: .3s ease-in-out;
 
 /* FOOTER*/
 footer{
-  width: 980px;
+  width: 90%;
   margin:0 auto;
 }
 #under-nav ul {
@@ -104,7 +103,7 @@ footer #under-nav a {
 	outline: none;
 	overflow: hidden;
 	transition: all .5s;
-  width: 150px;
+  width: 100px;
   height: 50px;
   line-height: 50px;
   margin: 0 10px;
@@ -155,23 +154,17 @@ footer #under-nav a:hover::after {
 
 
 
-@media screen and (max-width: 960px) {
-  main{
-    width: 90%;
+@media screen and (max-width: 1000px) {
+  .item, .description p  {
+  width: 40%;
   }
+}
 
+@media screen and (max-width: 500px) {
+.drawer-navbar-header .drawer-brand{
+  font-size: 1rem;
+}
 .item, .description p  {
-width: 100%;
+width: 80%;
 }
-
-footer{
-  width: 80%;
-}
-footer #under-nav a {
-  margin: 2px auto;
-
-}
-  #under-nav ul{
-    flex-direction: column;
-  }
 }
