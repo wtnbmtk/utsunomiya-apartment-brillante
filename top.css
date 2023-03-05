@@ -1,0 +1,326 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+  -webkit-text-size-adjust:100%;
+  margin: 0px;
+  padding: 0px;
+}
+li{list-style: none;}
+a{text-decoration: none;}
+@import  "https://fonts.googleapis.com/css?family=Roboto:300";
+p, a, h1,h2,h3{
+	font-family: 'Roboto', sans-serif;
+}
+
+/* HEAD */
+#top-head {
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 50px;
+    margin: 100px auto 0;
+    padding: 0;
+    line-height: 1;
+    z-index: 999;
+    background-color: #333;
+        border-bottom: solid #333;
+}
+#top-head .inner {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+}
+#top-head a{
+    color: #1b998b;
+}
+#top-head img{
+    vertical-align: bottom;
+    height: 50px;
+    width: 250px;
+    position: absolute;;
+}
+#global-nav ul {
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+#global-nav li {
+    display: inline-block;
+    text-align: center;
+}
+#global-nav ul li a {
+    display: block;
+    width: 100px;
+}
+/* Fixed */
+#top-head.fixed {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    background: rgba(255,255,255,.7);
+    transition: top 0.65s ease-in;
+    -webkit-transition: top 0.65s ease-in;
+    -moz-transition: top 0.65s ease-in;
+}
+/* Toggle Button */
+#nav-toggle {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 14px;
+    width: 34px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 101;
+}
+#nav-toggle div {
+    position: relative;
+}
+#nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #666;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
+#nav-toggle span:nth-child(1) {
+    top: 0;
+}
+#nav-toggle span:nth-child(2) {
+    top: 11px;
+}
+#nav-toggle span:nth-child(3) {
+    top: 22px;
+}
+
+main{
+  width: 980px;
+  margin:0 auto;
+  padding: 50px 0 0 0;
+
+}
+#background{
+  background-color: white;
+}
+.photo img {
+      vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+.item {
+      display: -webkit-flex;
+      display: flex;
+}
+.photo, .text{
+  width: 50%;
+  margin: auto 10px;
+}
+.text{
+  text-align: center;
+}
+.button a{
+  width: 150px;
+      height: 50px;
+      background-color: gray ;
+      line-height: 50px;
+      color: white;
+      margin: auto ;
+      display: block;
+      border-radius: 25px;
+      -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+transition: all  0.3s ease;
+}
+.button a:hover {
+background:#1b998b;
+
+}
+
+
+/* FOOTER*/
+footer{
+  width: 980px;
+  margin:0 auto;
+}
+#under-nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+#under-nav li {
+    text-align: center;
+}
+footer #under-nav a {
+	position: relative;
+	display: block;
+	color: #333;
+	text-decoration: none;
+	outline: none;
+	overflow: hidden;
+	transition: all .5s;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px;
+}
+footer #under-nav a::before,
+footer #under-nav a::after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 100%;
+	transition: all .5s;
+}
+footer #under-nav a::before {
+	top: 0;
+	left: 0;
+	border-top: 2px solid #333;
+	border-left: 2px solid #333;
+}
+footer #under-nav a::after {
+	right: 0;
+	bottom: 0;
+	border-right: 2px solid #333;
+	border-bottom: 2px solid #333;
+}
+footer #under-nav .twitter a:hover {
+	background-color: #1DA1F2;
+	color: #fff;
+	transition: all .7s;
+}
+footer #under-nav .facebook a:hover {
+	background-color: #3B5998;
+	color: #fff;
+	transition: all .7s;
+}
+footer #under-nav .google a:hover {
+	background-color: #DB4437;
+	color: #fff;
+	transition: all .7s;
+}
+footer #under-nav a:hover::before,
+footer #under-nav a:hover::after {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	transition: all .7s;
+}
+
+@media screen and (max-width: 960px) {
+  main{
+    width: 90%;
+  }
+  #top-head {
+      position: fixed;
+      top: 0;
+      margin-top: 0;
+  }
+  #top-head .inner {
+    line-height: 1;
+  }
+  /* Fixed reset */
+  #top-head.fixed {
+      padding-top: 0;
+  }
+  #mobile-head {
+    background-color: #333;
+    border-bottom: solid #333;
+      width: 100%;
+      height: 50px;
+      z-index: 999;
+      position: relative;
+  }
+  #global-nav {
+      position: absolute;
+      /* 開いてないときは画面外に配置 */
+      top: -500px;
+      background: #1b998b;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+  }
+  #global-nav ul {
+      position: static;
+      right: 0;
+      bottom: 0;
+      font-size: 14px;
+  }
+  #global-nav li {
+      display: block;
+  }
+  #top-head #global-nav ul li a,
+  #top-head.fixed #global-nav ul li a {
+      width: 100%;
+      color: #fff;
+      padding: 18px 0;
+  }
+  #nav-toggle {
+      display: block;
+  }
+  /* #nav-toggle 切り替えアニメーション */
+  .open #nav-toggle span:nth-child(1) {
+      top: 10px;
+      -webkit-transform: rotate(315deg);
+      -moz-transform: rotate(315deg);
+      transform: rotate(315deg);
+  }
+  .open #nav-toggle span:nth-child(2) {
+      width: 0;
+      left: 50%;
+  }
+  .open #nav-toggle span:nth-child(3) {
+      top: 10px;
+      -webkit-transform: rotate(-315deg);
+      -moz-transform: rotate(-315deg);
+      transform: rotate(-315deg);
+  }
+  /* #global-nav スライドアニメーション */
+  .open #global-nav {
+      /* #global-nav top + #mobile-head height */
+      -moz-transform: translateY(550px);
+      -webkit-transform: translateY(550px);
+      transform: translateY(550px);
+  }
+
+
+    .section-1, .section-3{
+    flex-direction: column;
+  }
+.photo, .text {
+  width: 100%;
+  margin: 0;
+  }
+
+  .section-2, .section-4{
+    flex-direction: column-reverse
+  }
+
+
+  footer{
+    width: 80%;
+  }
+  footer #under-nav a {
+    width: 90%;
+    margin: 2px auto;
+
+  }
+    #under-nav ul{
+      flex-direction: column;
+    }
+  }
