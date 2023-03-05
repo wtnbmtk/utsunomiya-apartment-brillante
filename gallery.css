@@ -15,47 +15,45 @@ p, a{font-size: medium;}
 h1,h2,h3{font-size: x-large;}
 
 /* HEAD */
-.drawer-navbar {
-  box-sizing: content-box;
+header{
+  container: header / inline-size;
 }
-.drawer-brand img{
-    vertical-align: bottom;
-    height: 60px;
-    width: 200px;
+.drawer-navbar{
+  box-sizing: content-box;
 }
 .drawer-navbar .drawer-nav{
     float: right;
 }
+.drawer-navbar-header .drawer-brand{
+  font-size: 1rem;
+}
+/* .drawer-brand img{
+  vertical-align: bottom;
+  height: 60px;
+  width: 200px;
+} */
 
 /* MAIN */
 main{
+  container: main / inline-size;
   width: 90%;
   margin:0 auto;
 }
 #background{
   background-color: white;
   box-shadow: 0 0 1px #dddddd;
-  margin-top: 8px;
+  margin-top: 1rem;
+  padding: 1rem 0;
 }
 #background h1{
-  margin: 0;
-  padding: 10px 0;
+  margin-top: 0;
   text-align: center;
 }
-.flexbox {
-display: -webkit-flex;
-display: flex;
--webkit-flex-wrap: wrap;
-flex-wrap: wrap;
-justify-content:center;
-    padding-bottom: 5px;
-}
-.item {
-  width: 20%;
-  padding: 15px;
-  margin: 5px;
-  text-align: center;
-
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  place-content: center;
+  grid-template: repeat(2, auto) / repeat(2, auto);
 }
 .item a {
   display: block;
@@ -152,19 +150,20 @@ footer #under-nav a:hover::after {
 	transition: all .7s;
 }
 
-
-
-@media screen and (max-width: 1000px) {
-  .item, .description p  {
-  width: 40%;
+@container header (min-width: 500px){
+  .drawer-navbar-header .drawer-brand{
+    font-size: 1.5rem;
   }
 }
 
-@media screen and (max-width: 500px) {
-.drawer-navbar-header .drawer-brand{
-  font-size: 1rem;
+@container main (min-width: 500px){
+  .grid {
+    grid-template: repeat(3, auto) / repeat(3, auto);
+  }
 }
-.item, .description p  {
-width: 80%;
-}
+
+@container main (min-width: 1000px){
+  .grid {
+    grid-template: repeat(4, auto) / repeat(4, auto);
+  }
 }
