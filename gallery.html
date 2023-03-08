@@ -9,9 +9,9 @@
 	<meta name="keywords" content=" アパート,一人暮らし,宇都宮">
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="general.css">
-	<link rel="stylesheet" href="lightbox.min.css">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 </head>
 <body>
   <header id="top-head">
@@ -42,17 +42,17 @@
 	<div class="gallery general">
 		<h1><span>GALLERY</span></h1>
 		<div class="gridGallery">
-			<a class="item" href="images/g04.jpeg" data-lightbox="album"><img src="images/g04.jpeg" alt="" /></a>
-			<a class="item" href="images/g05.jpeg" data-lightbox="album"><img src="images/g05.jpeg" alt="" /></a>
-			<a class="item" href="images/g10.jpeg" data-lightbox="album"><img src="images/g10.jpeg" alt="" /></a>
-			<a class="item" href="images/g11.jpeg" data-lightbox="album"><img src="images/g11.jpeg" alt="" /></a>
-			<a class="item" href="images/g12.jpeg" data-lightbox="album"><img src="images/g12.jpeg" alt="" /></a>
-			<a class="item" href="images/g13.jpeg" data-lightbox="album"><img src="images/g13.jpeg" alt="" /></a>
-			<a class="item" href="images/g14.jpeg" data-lightbox="album"><img src="images/g14.jpeg" alt="" /></a>
-			<a class="item" href="images/g20.jpeg" data-lightbox="album"><img src="images/g20.jpeg" alt="" /></a>
-			<a class="item" href="images/g18.jpeg" data-lightbox="album"><img src="images/g18.jpeg" alt="" /></a>
-			<a class="item" href="images/g19.jpeg" data-lightbox="album"><img src="images/g19.jpeg" alt="" /></a>
-			<a class="item" href="images/g22.jpeg" data-lightbox="album"><img src="images/g22.jpeg" alt="" /></a>
+			<a class="item" href="images/g04.jpeg" data-fancybox="gallery"><img src="images/g04.jpeg" alt="" /></a>
+			<a class="item" href="images/g05.jpeg" data-fancybox="gallery"><img src="images/g05.jpeg" alt="" /></a>
+			<a class="item" href="images/g10.jpeg" data-fancybox="gallery"><img src="images/g10.jpeg" alt="" /></a>
+			<a class="item" href="images/g11.jpeg" data-fancybox="gallery"><img src="images/g11.jpeg" alt="" /></a>
+			<a class="item" href="images/g12.jpeg" data-fancybox="gallery"><img src="images/g12.jpeg" alt="" /></a>
+			<a class="item" href="images/g13.jpeg" data-fancybox="gallery"><img src="images/g13.jpeg" alt="" /></a>
+			<a class="item" href="images/g14.jpeg" data-fancybox="gallery"><img src="images/g14.jpeg" alt="" /></a>
+			<a class="item" href="images/g20.jpeg" data-fancybox="gallery"><img src="images/g20.jpeg" alt="" /></a>
+			<a class="item" href="images/g18.jpeg" data-fancybox="gallery"><img src="images/g18.jpeg" alt="" /></a>
+			<a class="item" href="images/g19.jpeg" data-fancybox="gallery"><img src="images/g19.jpeg" alt="" /></a>
+			<a class="item" href="images/g22.jpeg" data-fancybox="gallery"><img src="images/g22.jpeg" alt="" /></a>
 		</div>
 	</div>
 </div>
@@ -69,6 +69,11 @@
 	<small>© Haruko Watanabe</small>
 </footer>
 <script type="text/javascript" src="general.js"></script>
-<script src="lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+	Fancybox.bind('[data-fancybox="gallery"]', {
+	  //
+	});    
+  </script>
 </body>
 </html>
