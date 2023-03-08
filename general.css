@@ -58,7 +58,7 @@ margin: 0 auto;
 }
 #global-nav ul li a {
   display: block;
-  margin: 0 20px;
+  margin: 0 16px;
 }
 /* Fixed */
 #top-head.fixed {
@@ -75,15 +75,12 @@ margin: 0 auto;
 #nav-toggle {
   display: none;
   position: absolute;
-  right: 12px;
-  top: 14px;
-  width: 34px;
-  height: 36px;
+  right: 8px;
+  top: 16px;
+  width: 24px;
+  height: 18px;
   cursor: pointer;
   z-index: 101;
-}
-#nav-toggle div {
-  position: relative;
 }
 #nav-toggle span {
   display: block;
@@ -100,10 +97,10 @@ margin: 0 auto;
   top: 0;
 }
 #nav-toggle span:nth-child(2) {
-  top: 11px;
+  top: 8px;
 }
 #nav-toggle span:nth-child(3) {
-  top: 22px;
+  top: 16px;
 }
 
 
@@ -120,15 +117,14 @@ main{
   margin-top: 1rem;
 }
 .general {
-  width: 80%;
+  width: 276px;
   margin: 0 auto;
   padding-bottom: 1rem;
 }
 .general h1 {
   position: relative;
-  padding: 0 65px;
   text-align: center;
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   padding: 1rem 0;
 }
@@ -155,7 +151,7 @@ main{
 .item {
   display: block;
   position: relative;
-  width: 150px;
+  width: 130px;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -208,37 +204,28 @@ main{
   width: 100%;
   height: 300px;
 }
-.button a{
-width: 150px;
-  height: 50px;
-  background-color: gray ;
-  line-height: 50px;
-  color: white;
-  margin: auto ;
-  display: block;
-  border-radius: 25px;
-  -webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all  0.3s ease;
-}
-.button a:hover {
-background:#1b998b;
-
+#content{
+  width: 100%;
+  height: 200px;
 }
 
 /* FOOTER*/
 footer{
+  container: footer / inline-size;
   width: 90%;
   margin:0 auto;
 }
 #under-nav ul {
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  padding: 0;
+  width: 276px;
+  margin: 0 auto;
+  font-size: 0;
 }
 #under-nav li {
-    text-align: center;
+  display: block;
+  width: 130px;
+  margin: 8px auto;
+  text-align: center;
 }
 footer #under-nav a {
 	position: relative;
@@ -248,10 +235,8 @@ footer #under-nav a {
 	outline: none;
 	overflow: hidden;
 	transition: all .5s;
-  width: 100px;
   height: 50px;
   line-height: 50px;
-  margin: 0 10px;
 }
 footer #under-nav a::before,
 footer #under-nav a::after {
@@ -303,10 +288,6 @@ footer #under-nav a:hover::after {
     top: 0;
     margin-top: 0;
   }
-  /* #top-head .inner {
-    line-height: 1;
-  } */
-  /* Fixed reset */
   #top-head.fixed {
     padding-top: 0;
   }
@@ -335,7 +316,6 @@ footer #under-nav a:hover::after {
   }
   #top-head #global-nav ul li a,
   #top-head.fixed #global-nav ul li a {
-    width: 100%;
     color: #fff;
     padding: 18px 0;
   }
@@ -370,7 +350,7 @@ footer #under-nav a:hover::after {
 
 @container main (min-width: 500px){
   .general {
-    width: 70%;
+    width: 422px;
   }
   .gridGallery {
     grid-template: repeat(3, auto) / repeat(3, auto);
@@ -379,9 +359,26 @@ footer #under-nav a:hover::after {
 
 @container main (min-width: 1000px){
   .general {
-    width: 60%;
+    width: 568px;
   }
   .gridGallery {
     grid-template: repeat(4, auto) / repeat(4, auto);
   }
+}
+
+@container footer (min-width: 500px){
+  #under-nav ul{
+    width: 422px;
+    padding-top: 8px;
+  }
+  #under-nav li {
+    display: inline-block;
+    margin: 0 8px;
+  }
+  #under-nav li:first-child {
+    margin-left: 0;
+    }
+    #under-nav li:last-child {
+    margin-right: 0;
+    }
 }
