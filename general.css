@@ -12,7 +12,7 @@ body {
 li{list-style: none;}
 a{text-decoration: none;}
 p, a{font-size: medium;}
-h1,h2,h3{font-size: x-large;}
+img{max-width: 100%;}
 
 /* HEAD */
 header{
@@ -119,12 +119,10 @@ main{
 .general {
   width: 276px;
   margin: 0 auto;
-  padding-bottom: 1rem;
 }
 .general h1 {
   position: relative;
   text-align: center;
-  width: 80%;
   margin: 0 auto;
   padding: 1rem 0;
 }
@@ -208,9 +206,54 @@ main{
   width: 100%;
   height: 300px;
 }
+#gMap, .form-list-wrapper{
+  padding-bottom: 1rem;
+}
 #content{
   width: 100%;
   height: 200px;
+}
+#spearly-list-body{
+  margin: 0;
+  padding: 0;
+}
+#spearly-list-body li{
+  margin: 1rem auto;
+}
+#spearly-list-body li:first-child{
+  margin-top: 0;
+}
+#spearly-list-body li:last-child{
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+#spearly-list-body a{
+  display: block;
+  background-color: skyblue;
+  color: #333;
+}
+#spearly-list-body a img{
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+#spearly-list-body a .articleTextLink{
+  width: 100%;
+  height: 130px;
+  margin: 0;
+  padding: 1rem;
+}
+.articleTextLink h3, .articleTextLink p{
+  margin: 0;
+}
+.article-item-wrapper{
+  padding-bottom: 1rem;
+}
+.article-item-wrapper img{
+  display: block;
+  margin: 0 auto;
+  height: 260px;
+  object-fit: cover;
 }
 
 /* FOOTER*/
@@ -352,16 +395,25 @@ footer #under-nav a:hover::after {
   }
 }
 
-@container main (min-width: 438px){
+@container main (min-width: 454px){
   .general {
     width: 422px;
   }
   .gridGallery {
     grid-template: repeat(3, auto) / repeat(3, auto);
   }
+  #spearly-list-body a{
+    display: flex;
+  }
+  #spearly-list-body a img{
+    width: 50%;
+  }
+  #spearly-list-body a .articleTextLink{
+    width: 50%;
+  }
 }
 
-@container main (min-width: 584px){
+@container main (min-width: 600px){
   .general {
     width: 568px;
   }
@@ -370,7 +422,7 @@ footer #under-nav a:hover::after {
   }
 }
 
-@container footer (min-width: 438px){
+@container footer (min-width: 454px){
   #under-nav ul{
     width: 422px;
     padding-top: 8px;
