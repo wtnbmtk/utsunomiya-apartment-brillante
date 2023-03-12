@@ -119,12 +119,13 @@ main{
 .general {
   width: 276px;
   margin: 0 auto;
+  padding: 1rem 0;
 }
 .general h1 {
   position: relative;
   text-align: center;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
 }
 .general h1:before {
   position: absolute;
@@ -144,7 +145,7 @@ main{
   display: grid;
   grid-gap: 1rem;
   place-content: center;
-  grid-template: repeat(2, auto) / repeat(2, auto);
+  grid-template-columns: 1fr 1fr;
 }
 .item {
   display: block;
@@ -206,9 +207,6 @@ main{
   width: 100%;
   height: 300px;
 }
-#gMap, .form-list-wrapper{
-  padding-bottom: 1rem;
-}
 #content{
   width: 100%;
   height: 200px;
@@ -225,7 +223,6 @@ main{
 }
 #spearly-list-body li:last-child{
   margin-bottom: 0;
-  padding-bottom: 1rem;
 }
 #spearly-list-body a{
   display: block;
@@ -245,9 +242,6 @@ main{
 }
 .articleTextLink h3, .articleTextLink p{
   margin: 0;
-}
-.article-item-wrapper{
-  padding-bottom: 1rem;
 }
 .article-item-wrapper img{
   display: block;
@@ -347,11 +341,11 @@ footer #under-nav a:hover::after {
   #global-nav {
     display: none;
     position: absolute;
-    top: -200px;
     background: #333;
     width: 100%;
     text-align: center;
     padding: 10px 0;
+    inset: auto;
   }
   #global-nav ul {
     position: static;
@@ -389,9 +383,6 @@ footer #under-nav a:hover::after {
   /* #global-nav スライドアニメーション */
   .open #global-nav {
     display: block;
-    -moz-transform: translateY(250px);
-    -webkit-transform: translateY(250px);
-    transform: translateY(250px);
   }
 }
 
@@ -400,7 +391,7 @@ footer #under-nav a:hover::after {
     width: 422px;
   }
   .gridGallery {
-    grid-template: repeat(3, auto) / repeat(3, auto);
+    grid-template-columns: 1fr 1fr 1fr;
   }
   #spearly-list-body a{
     display: flex;
@@ -418,7 +409,7 @@ footer #under-nav a:hover::after {
     width: 568px;
   }
   .gridGallery {
-    grid-template: repeat(4, auto) / repeat(4, auto);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
