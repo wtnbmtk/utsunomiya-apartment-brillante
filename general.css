@@ -1,4 +1,9 @@
-@import  "https://fonts.googleapis.com/css?family=Roboto:300";
+@font-face {
+  font-family: "Voto Serif GX";
+  src: url("VotoSerifGX.ttf") format("truetype-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -7,7 +12,9 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #f9f9f9;
-  	font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-family: "Voto Serif GX", serif;
+  font-variation-settings: "wght" 100, "wdth" 50, "opsz" 50, "GRAD" 1;
 }
 li{list-style: none;}
 a{text-decoration: none;}
@@ -122,24 +129,8 @@ main{
   padding: 1rem 0;
 }
 .general h1 {
-  position: relative;
   text-align: center;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-}
-.general h1:before {
-  position: absolute;
-  top: calc(50% - 1px);
-  left: 0;
-  width: 100%;
-  height: 2px;
-  content: '';
-  background: #333;
-}
-.general h1 span {
-  position: relative;
-  padding: 0 1em;
-  background: #fff;
+  margin: 0 auto 1rem;
 }
 .gridGallery {
   display: grid;
