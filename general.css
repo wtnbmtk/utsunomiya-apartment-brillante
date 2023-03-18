@@ -117,7 +117,7 @@ main{
   margin-top: 1rem;
 }
 .general {
-  width: 276px;
+  max-width: 276px;
   margin: 0 auto;
   padding: 1rem 0;
 }
@@ -125,7 +125,7 @@ main{
   position: relative;
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .general h1:before {
   position: absolute;
@@ -226,8 +226,15 @@ main{
 }
 #spearly-list-body a{
   display: block;
-  background-color: skyblue;
-  color: #333;
+  color: lavender;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  position: relative;
+  top: 0;
+}
+#spearly-list-body a:hover {
+  top: -5px;
+  transition: 0.3s ease-in-out;
 }
 #spearly-list-body a img{
   width: 100%;
@@ -388,25 +395,20 @@ footer #under-nav a:hover::after {
 
 @container main (min-width: 454px){
   .general {
-    width: 422px;
+    max-width: 422px;
   }
   .gridGallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
   #spearly-list-body a{
-    display: flex;
-  }
-  #spearly-list-body a img{
-    width: 50%;
-  }
-  #spearly-list-body a .articleTextLink{
-    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 }
 
 @container main (min-width: 600px){
   .general {
-    width: 568px;
+    max-width: 568px;
   }
   .gridGallery {
     grid-template-columns: 1fr 1fr 1fr 1fr;
